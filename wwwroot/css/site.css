@@ -1,0 +1,502 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f2f2f2ef;
+color: #2B2B2B;
+}
+
+/* Header */
+
+.main-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 24px 70px;
+    background-color: #799eb09f;
+    box-shadow: 0 4px 18px rgba(0, 0, 0, 0.04);
+}
+
+.logo {
+    font-size: 28px;
+    font-weight: 700;
+    text-decoration: none;
+    color: #f0f0f0;
+}
+
+/* Navigation */
+
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap: 36px;
+
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #f0f0f0;
+    font-size: 17px;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+.nav-links a:hover {
+    color: #637d8a;
+}
+
+/* Dropdown */
+
+.dropdown,
+.dropdown-sub {
+    position: relative;
+}
+
+.dropdown-menu,
+.submenu {
+    display: none;
+    position: absolute;
+
+    background: #dddddd97;
+    list-style: none;
+
+    padding: 10px 0;
+    min-width: 260px;
+
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.10);
+    border-radius: 4px;
+
+    z-index: 1000;
+}
+
+.dropdown-menu {
+    top: 100%;
+    left: 0;
+}
+
+.submenu {
+    top: 100%;
+    left: 0;
+}
+
+.dropdown:hover > .dropdown-menu {
+    display: block;
+}
+
+.dropdown-sub:hover > .submenu {
+    display: block;
+}
+
+.dropdown-menu li,
+.submenu li {
+    margin: 0;
+}
+
+.dropdown-menu a,
+.submenu a {
+    display: block;
+    padding: 11px 18px;
+
+    font-size: 15px;
+    font-weight: 500;
+    color: #505050;
+    white-space: nowrap;
+}
+
+.dropdown-menu a:hover,
+.submenu a:hover {
+    background: #eceeef;
+    color: #34464C;
+}
+.phase-page {
+    max-width: 1100px;
+    margin: 60px auto;
+    padding: 0 40px;
+}
+
+.phase-page h1 {
+    font-size: 36px;
+    margin-bottom: 40px;
+}
+
+.phase-section {
+    padding: 35px 0;
+    border-bottom: 1px solid #bcbcbc;
+}
+
+.phase-section h2 {
+    font-size: 26px;
+    margin-bottom: 18px;
+}
+
+.phase-section p {
+    font-size: 18px;
+    line-height: 1.7;
+    max-width: 850px;
+}
+
+.cards-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+    margin-top: 25px;
+}
+
+.info-card {
+    background: #fffff7ff;
+    padding: 25px;
+    border-radius: 8px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.06);
+}
+
+.info-card h3 {
+    font-size: 20px;
+    margin-bottom: 12px;
+}
+
+.info-card p {
+    font-size: 16px;
+}
+
+.goals-list {
+    padding-left: 22px;
+    font-size: 18px;
+    line-height: 1.9;
+}
+.check-list {
+    list-style: none;
+    padding-left: 0;
+    font-size: 18px;
+    line-height: 1.9;
+}
+
+.check-list li::before {
+    content: "✔";
+    margin-right: 10px;
+    color: #333;
+    font-weight: bold;
+}
+
+.diagram-placeholder {
+    width: 100%;
+    min-height: 320px;
+    background: white;
+    border: 1px dashed #bbb;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #777;
+    margin: 25px 0;
+    font-size: 18px;
+}
+/* Code Implementation */
+
+.phase-section {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.code-samples {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+    margin-top: 14px;
+}
+
+.code-card {
+    background:#fffff7ff;
+    padding: 22px;
+    border-radius: 8px;
+    width: 100%;
+    max-width: 850px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.06);
+}
+
+.code-card h3 {
+    margin-bottom: 8px;
+}
+
+.code-card p {
+    line-height: 1.6;
+    margin-bottom: 14px;
+}
+
+.code-placeholder {
+    height: 190px;
+    border: 1px dashed #bbb;
+    border-radius: 6px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    color: #777;
+}
+.phase-section h2 + p {
+    margin-bottom: 10px;
+}
+.test-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 25px;
+    background: #fffff7ff;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.06);
+}
+
+.test-table th,
+.test-table td {
+    border: 1px solid #d1d1d1;
+    padding: 14px;
+    text-align: left;
+    font-size: 15px;
+}
+
+.test-table th {
+    background: #E8ECEE;
+    font-weight: 700;
+}
+
+.test-table tr:nth-child(even) {
+    background: #F7F7F7;
+}
+
+
+
+/* Home Page */
+.home-hero {
+    position: relative;
+    width: 100%;
+    height: calc(100vh - 70px);
+    overflow: hidden;
+
+    background-image: url('/images/hero.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.hero-text {
+    position: absolute;
+    left: 10%;
+    bottom: 38%;
+    max-width: 700px;
+    padding: 20px;
+}
+
+.hero-text h1 {
+    font-size: clamp(40px, 5vw, 60px);
+    margin-bottom: 15px;
+}
+
+.hero-text p {
+    font-size: clamp(18px, 2vw, 26px);
+    line-height: 1.45;
+}
+
+/* CV Page */
+
+.cv-preview {
+    width: 100%;
+    height: 750px;
+    background: white;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.06);
+    margin-bottom: 25px;
+}
+
+.cv-preview iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+
+.download-btn {
+    display: inline-block;
+    padding: 14px 28px;
+    background:#799eb0fd;
+    color: white;
+    text-decoration: none;
+    border-radius: 6px;
+    font-weight: bold;
+}
+
+.download-btn:hover {
+    opacity: 0.85;
+}
+
+
+/* UI/UX Image Gallery */
+
+.image-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 22px;
+    margin-top: 30px;
+    margin-bottom: 35px;
+}
+
+.image-card {
+    background: #fffff7ff;
+    border-radius: 8px;
+    padding: 14px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.06);
+    text-align: center;
+}
+
+.image-card p {
+    margin-top: 18px;
+    margin-bottom: 4px;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+/* Wireframes */
+.wireframe-grid .image-card img {
+    width: 100%;
+    height: 190px;
+   object-fit: cover;
+    border: 1px solid #D6D6D6;
+    border-radius: 6px;
+    background: #fffff7ff;
+}
+
+/* Final UI Screenshots */
+.final-ui-grid .image-card img {
+    width: 100%;
+    height: 137px;
+    object-fit: contain;
+    border: 1px solid #D6D6D6;
+    border-radius: 6px;
+    background: #fffff7ff;
+}
+/* Diagrams General */
+.diagram-card {
+    margin-top: 25px;
+    margin-bottom: 30px;
+    background: #fffff7ff;
+    padding: 16px;
+    border-radius: 8px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.06);
+    text-align: center;
+
+    width: fit-content;
+    max-width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+}
+.diagram-card img {
+    height: 555px;
+    max-width: 100%;
+    object-fit: contain;
+    border: 1px solid #D6D6D6;
+    border-radius: 6px;
+}
+
+
+/* Use Case Diagram */
+
+.usecase-image img {
+    height: 550px;
+}
+
+
+/* Site Map */
+
+.sitemap-image img {
+  
+height: 550px;
+}
+
+
+/* User Flow */
+
+.userflow-image img {
+    height: 550px;
+}
+/* Development Images */
+
+.dev-image-card {
+    margin-top: 25px;
+    margin-bottom: 30px;
+    background: #fffff7ff;
+    padding: 16px;
+    border-radius: 8px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.06);
+    text-align: center;
+}
+
+.dev-image-card img {
+    max-width: 100%;
+    object-fit: contain;
+    border: 1px solid #D6D6D6;
+    border-radius: 6px;
+}
+
+.mvc-architecture-image {
+    width: fit-content;
+    max-width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.mvc-architecture-image img {
+    height: 430px;
+    max-width: 100%;
+    object-fit: contain;
+    border: 1px solid #D6D6D6;
+    border-radius: 6px;
+}
+
+
+/* Code Screenshots */
+
+.code-image {
+    margin-top: 18px;
+    overflow: hidden;
+    border: 1px solid #D6D6D6;
+    border-radius: 6px;
+    background: #fffff7ff;
+}
+
+.code-image img {
+    width: 100%;
+    height: 330px;
+    object-fit: cover;
+    object-position: center top;
+    display: block;
+    border: none;
+    border-radius: 0;
+}
+
+.controller-code-image img {
+    height: 330px;
+}
+
+.layout-code-image img {
+    height: 330px;
+}
+
+/* Responsive Design */
+@media (max-width: 900px) {
+    .hero-text {
+        left: 7%;
+        bottom: 34%;
+        max-width: 360px;
+    }
+
+    .hero-text p {
+        font-size: 18px;
+    }
+}
+
+

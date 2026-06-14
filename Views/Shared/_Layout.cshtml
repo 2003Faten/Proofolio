@@ -1,0 +1,62 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Proofolio</title>
+
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+</head>
+
+<body>
+
+<header class="main-header">
+    <a class="logo" asp-controller="Home" asp-action="Index">Proofolio</a>
+
+    <nav>
+        <ul class="nav-links">
+            <li>
+                <a asp-controller="Home" asp-action="Index">Home</a>
+            </li>
+
+            <li class="dropdown">
+                <a href="#">Projects ▾</a>
+
+                <ul class="dropdown-menu">
+                    <li class="dropdown-sub">
+                        <a href="#">Proofolio ▸</a>
+
+                        <ul class="submenu">
+                            <li><a asp-controller="Home" asp-action="Planning">Planning & Business Understanding</a></li>
+                            <li><a asp-controller="Home" asp-action="Requirements">Requirements Gathering</a></li>
+                            <li><a asp-controller="Home" asp-action="Analysis">System Analysis</a></li>
+                            <li><a asp-controller="Home" asp-action="UIUX">UI/UX Design</a></li>
+                            <li><a asp-controller="Home" asp-action="Development">Development</a></li>
+                            <li><a asp-controller="Home" asp-action="Testing">Testing & QA</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+
+            <li>
+                <a asp-controller="Home" asp-action="Contact">Contact</a>
+            </li>
+
+            <li>
+                <a asp-controller="Home" asp-action="CV">CV</a>
+            </li>
+        </ul>
+    </nav>
+</header>
+
+<main>
+    @RenderBody()
+</main>
+
+<script src="~/lib/jquery/dist/jquery.min.js"></script>
+<script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+
+@await RenderSectionAsync("Scripts", required: false)
+
+</body>
+</html>

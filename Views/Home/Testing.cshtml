@@ -1,0 +1,168 @@
+<section class="phase-page">
+
+    <h1>Testing & QA</h1>
+
+    <section class="phase-section">
+        <h2>Testing Strategy</h2>
+
+        <div class="cards-container">
+            <div class="info-card">
+                <h3>Static Testing</h3>
+                <p>
+                    Static testing was applied by reviewing the code structure,
+                    file naming, MVC organization, and alignment between pages
+                    and requirements.
+                </p>
+            </div>
+
+            <div class="info-card">
+                <h3>Dynamic Testing</h3>
+                <p>
+                    Dynamic testing was performed by running the website locally
+                    and testing navigation, pages, dropdown menus, and user interactions.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <section class="phase-section">
+        <h2>Testing Types Applied</h2>
+
+        <div class="cards-container">
+            <div class="info-card">
+                <h3>Functional Testing</h3>
+                <p>Verified that links, pages, dropdown menus, and main website features work correctly.</p>
+            </div>
+
+            <div class="info-card">
+                <h3>Integration Testing</h3>
+                <p>Tested the connection between the shared layout, controller actions, and views.</p>
+            </div>
+
+            <div class="info-card">
+                <h3>System Testing</h3>
+                <p>Tested the website as a complete system from the user’s perspective.</p>
+            </div>
+
+            <div class="info-card">
+                <h3>UI Testing</h3>
+                <p>Checked visual consistency, layout behavior, and interface element visibility.</p>
+            </div>
+
+            <div class="info-card">
+                <h3>Usability Testing</h3>
+                <p>Evaluated how easily users can navigate through projects and SDLC phases.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="phase-section">
+        <h2>Test Cases</h2>
+
+        <table class="test-table">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Scenario</th>
+                    <th>Expected Result</th>
+                    <th>Actual Result</th>
+                    <th>Status</th>
+                </tr>
+            </thead>
+
+            <tbody>
+                <tr>
+                    <td>TC01</td>
+                    <td>Open Home Page</td>
+                    <td>Home page should open successfully</td>
+                    <td>Home page opened successfully</td>
+                    <td>Passed ✔</td>
+                </tr>
+
+                <tr>
+                    <td>TC02</td>
+                    <td>Open CV Page</td>
+                    <td>CV page should open successfully</td>
+                    <td>CV page opened successfully</td>
+                    <td>Passed ✔</td>
+                </tr>
+
+                <tr>
+                    <td>TC03</td>
+                    <td>Open Contact Page</td>
+                    <td>Contact page should open successfully</td>
+                    <td>Contact page opened successfully</td>
+                    <td>Passed ✔</td>
+                </tr>
+
+                <tr>
+                    <td>TC04</td>
+                    <td>Navigate to Planning Phase</td>
+                    <td>Planning phase page should open correctly</td>
+                    <td>Planning phase page opened correctly</td>
+                    <td>Passed ✔</td>
+                </tr>
+
+                <tr>
+                    <td>TC05</td>
+                    <td>Navigate to UI/UX Design Phase</td>
+                    <td>UI/UX phase page should open correctly</td>
+                    <td>UI/UX phase page opened correctly after fixing the view name</td>
+                    <td>Passed ✔</td>
+                </tr>
+
+                <tr>
+                    <td>TC06</td>
+                    <td>Use Projects Dropdown</td>
+                    <td>User should access project phases from the dropdown menu</td>
+<td>Dropdown worked correctly after adjusting submenu behavior</td>
+                    <td>Passed ✔</td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+
+    <section class="phase-section">
+        <h2>Defects Found & Fixes</h2>
+
+        <div class="cards-container">
+            <div class="info-card">
+                <h3>Dropdown Menu Issue</h3>
+                <p>
+                    The project phases menu disappeared before the user could select
+                    a phase. The issue was fixed by adjusting the submenu position
+                    and improving the hover behavior in CSS.
+                </p>
+            </div>
+
+            <div class="info-card">
+                <h3>UI/UX Page Not Found</h3>
+                <p>
+                    The UI/UX page did not open because the View name did not match
+                    the Controller action. The issue was fixed by renaming the View
+                    to UIUX.cshtml to match the MVC routing structure.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <section class="phase-section">
+        <h2>Test Summary</h2>
+
+        <ul class="goals-list">
+            <li>Total Test Cases: 6</li>
+            <li>Passed: 6</li>
+            <li>Failed after fixes: 0</li>
+            <li>Final Status: Passed</li>
+        </ul>
+    </section>
+
+    <section class="phase-section">
+        <h2>Testing Evidence</h2>
+
+        <div class="diagram-placeholder">
+            Testing Evidence Screenshots
+        </div>
+    </section>
+
+</section>
