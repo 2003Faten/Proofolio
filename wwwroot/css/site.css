@@ -281,22 +281,22 @@ color: #2B2B2B;
     background-repeat: no-repeat;
 }
 
-.hero-text {
-    position: absolute;
-    left: 10%;
-    bottom: 38%;
-    max-width: 700px;
-    padding: 20px;
+.hero-text { 
+    position: absolute; 
+    left: 7%; 
+    bottom: 34%; 
+    max-width: 500px; 
+    padding: 20px; 
 }
 
-.hero-text h1 {
-    font-size: clamp(40px, 5vw, 60px);
-    margin-bottom: 15px;
+.hero-text h1 { 
+    font-size: clamp(34px, 4vw, 52px); 
+    margin-bottom: 15px; 
 }
 
-.hero-text p {
-    font-size: clamp(18px, 2vw, 26px);
-    line-height: 1.45;
+.hero-text p { 
+    font-size: clamp(15px, 1.5vw, 21px); 
+    line-height: 1.4; 
 }
 
 /* CV Page */
@@ -500,41 +500,5 @@ height: 550px;
 
     .nav-links a {
         font-size: 14px;
-    }
-}
-/* Home text fix for smaller screens */
-@media (max-width: 1200px) {
-    .hero-text {
-        left: 6%;
-        bottom: 32%;
-        max-width: 480px;
-    }
-
-    .hero-text h1 {
-        font-size: 44px;
-    }
-
-    .hero-text p {
-        font-size: 18px;
-        line-height: 1.4;
-    }
-}
-
-@media (max-width: 768px) {
-    .hero-text {
-        left: 24px;
-        right: 120px;
-        bottom: 28%;
-        max-width: 260px;
-        padding: 0;
-    }
-
-    .hero-text h1 {
-        font-size: 34px;
-    }
-
-    .hero-text p {
-        font-size: 15px;
-        line-height: 1.35;
     }
 }
