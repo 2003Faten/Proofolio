@@ -28,3 +28,4 @@
 /Users/fatenabedaljohani/Desktop/Proofolio/obj/Debug/net8.0/Proofolio.pdb
 /Users/fatenabedaljohani/Desktop/Proofolio/obj/Debug/net8.0/Proofolio.genruntimeconfig.cache
 /Users/fatenabedaljohani/Desktop/Proofolio/obj/Debug/net8.0/ref/Proofolio.dll
+/Users/fatenabedaljohani/Desktop/Proofolio/obj/Debug/net8.0/Proofolio.sourcelink.json

@@ -359,9 +359,9 @@ color: #2B2B2B;
  
 /* Wireframes */ 
 .wireframe-grid .image-card img { 
-    width: 100%; 
+    width: 90%; 
     height: 190px; 
-   object-fit: cover; 
+   object-fit: contain; 
     border: 1px solid #D6D6D6; 
     border-radius: 6px; 
     background: #fffff7ff; 
@@ -369,9 +369,9 @@ color: #2B2B2B;
  
 /* Final UI Screenshots */ 
 .final-ui-grid .image-card img { 
-    width: 100%; 
+    width: 87%; 
     height: 137px; 
-    object-fit: contain; 
+    object-fit: cover; 
     border: 1px solid #D6D6D6; 
     border-radius: 6px; 
     background: #fffff7ff; 
@@ -500,5 +500,41 @@ height: 550px;
 
     .nav-links a {
         font-size: 14px;
+    }
+}
+/* Home text fix for smaller screens */
+@media (max-width: 1200px) {
+    .hero-text {
+        left: 6%;
+        bottom: 32%;
+        max-width: 480px;
+    }
+
+    .hero-text h1 {
+        font-size: 44px;
+    }
+
+    .hero-text p {
+        font-size: 18px;
+        line-height: 1.4;
+    }
+}
+
+@media (max-width: 768px) {
+    .hero-text {
+        left: 24px;
+        right: 120px;
+        bottom: 28%;
+        max-width: 260px;
+        padding: 0;
+    }
+
+    .hero-text h1 {
+        font-size: 34px;
+    }
+
+    .hero-text p {
+        font-size: 15px;
+        line-height: 1.35;
     }
 }
