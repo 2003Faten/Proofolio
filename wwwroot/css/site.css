@@ -17,7 +17,7 @@ color: #2B2B2B;
     justify-content: space-between;
     align-items: center;
 
-    padding: 18px 70px;
+    padding: 12px 70px;
     background-color: #799eb09f;
     box-shadow: 0 4px 18px rgba(0, 0, 0, 0.04);
 }
@@ -518,10 +518,9 @@ height: 550px;
     font-size: 18px;
     line-height: 1.4;}
 
-    .cards-container,
-    .image-grid {
-        grid-template-columns: repeat(2, 1fr);
-    }
+   .cards-container {
+    grid-template-columns: repeat(2, 1fr);
+}
 
 
     .code-image img {
@@ -602,19 +601,10 @@ height: 550px;
         font-size: 16px;
     }
 
-    .cards-container,
-    .image-grid {
-        grid-template-columns: 1fr;
-    }
-.wireframe-grid .image-card img {
-    height: auto;
-    object-fit: contain;
+  .cards-container {
+    grid-template-columns: 1fr;
 }
 
-.final-ui-grid .image-card img {
-    height: auto;
-    object-fit: contain;
-}
 
     .diagram-card img,
     .mvc-architecture-image img,
