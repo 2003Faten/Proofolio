@@ -483,10 +483,11 @@ height: 550px;
     height: 330px;
 }
 /* Responsive Fixes */
+
 /* iPad / Tablet */
 @media (max-width: 1024px) {
     .main-header {
-        padding: 18px 32px;
+        padding: 14px 32px;
     }
 
     .nav-links {
@@ -497,35 +498,8 @@ height: 550px;
         font-size: 15px;
     }
 
-    .home-hero {
-        height: 70vh;
-        background-position: center;
-    }
-
-.hero-text {
-    left: 5%;
-    bottom: 18%;
-    max-width: 420px;
-    padding: 0;
-    background: transparent;
-    border-radius: 0;
-}
-
-.hero-text h1 {
-    font-size: 42px;}
-
-.hero-text p {
-    font-size: 18px;
-    line-height: 1.4;}
-
-   .cards-container {
-    grid-template-columns: repeat(2, 1fr);
-}
-
-
-    .code-image img {
-        height: auto;
-        object-fit: contain;
+    .cards-container {
+        grid-template-columns: repeat(2, 1fr);
     }
 
     .cv-preview {
@@ -561,29 +535,6 @@ height: 550px;
         min-width: 220px;
     }
 
-    .home-hero {
-        height: 78vh;
-        background-position: center;
-    }
-
-.hero-text {
-    left: 24px;
-    right: 140px;
-    bottom: 25%;
-    max-width: 260px;
-    padding: 0;
-    background: transparent;
-    border-radius: 0;}
-
-.hero-text h1 {
-    font-size: 36px;
-}
-
-.hero-text p {
-    font-size: 16px;
-    line-height: 1.35;
-}
-
     .phase-page {
         margin: 35px auto;
         padding: 0 22px;
@@ -601,52 +552,11 @@ height: 550px;
         font-size: 16px;
     }
 
-  .cards-container {
-    grid-template-columns: 1fr;
-}
-
-
-    .diagram-card img,
-    .mvc-architecture-image img,
-    .usecase-image img,
-    .sitemap-image img,
-    .userflow-image img {
-        height: auto;
-        width: 100%;
-    }
-
-    .code-card {
-        max-width: 100%;
-        padding: 18px;
-    }
-
-    .code-image img {
-        height: auto;
-        object-fit: contain;
+    .cards-container {
+        grid-template-columns: 1fr;
     }
 
     .cv-preview {
         height: 500px;
     }
-}
-/* Restore UI/UX images - final override */
-
-.image-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 22px;
-    margin-top: 30px;
-    margin-bottom: 35px;
-}
-
-.wireframe-grid .image-card img {
-    width: 100%;
-    height: 190px;
-    object-fit: cover;
-}
-
-.final-ui-grid .image-card img {
-    width: 100%;
-    height: 137px;
-    object-fit: contain;
 }
