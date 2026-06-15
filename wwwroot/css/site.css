@@ -53,150 +53,151 @@ color: #2B2B2B;
     color: #637d8a;
 }
 
-/* Dropdown */
-
-.dropdown,
-.dropdown-sub {
-    position: relative;
-}
-
-.dropdown-menu,
-.submenu {
-    display: none;
-    position: absolute;
-
-    background: #dddddd97;
-    list-style: none;
-
-    padding: 10px 0;
-    min-width: 260px;
-
-    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.10);
-    border-radius: 4px;
-
-    z-index: 1000;
-}
-
-.dropdown-menu {
-    top: 100%;
-    left: 0;
-}
-
-.submenu {
-    top: 100%;
-    left: 0;
-}
-
-.dropdown:hover > .dropdown-menu {
-    display: block;
-}
-
-.dropdown-sub:hover > .submenu {
-    display: block;
-}
-
-.dropdown-menu li,
-.submenu li {
-    margin: 0;
-}
-
-.dropdown-menu a,
-.submenu a {
-    display: block;
-    padding: 11px 18px;
-
-    font-size: 15px;
-    font-weight: 500;
-    color: #505050;
-    white-space: nowrap;
-}
-
-.dropdown-menu a:hover,
-.submenu a:hover {
-    background: #eceeef;
-    color: #34464C;
-}
-.phase-page {
-    max-width: 1100px;
-    margin: 60px auto;
-    padding: 0 40px;
-}
-
-.phase-page h1 {
-    font-size: 36px;
-    margin-bottom: 40px;
-}
-
-.phase-section {
-    padding: 35px 0;
-    border-bottom: 1px solid #bcbcbc;
-}
-
-.phase-section h2 {
-    font-size: 26px;
-    margin-bottom: 18px;
-}
-
-.phase-section p {
-    font-size: 18px;
-    line-height: 1.7;
-    max-width: 850px;
-}
-
-.cards-container {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 24px;
-    margin-top: 25px;
-}
-
-.info-card {
-    background: #fffff7ff;
-    padding: 25px;
-    border-radius: 8px;
-    box-shadow: 0 8px 20px rgba(0,0,0,0.06);
-}
-
-.info-card h3 {
-    font-size: 20px;
-    margin-bottom: 12px;
-}
-
-.info-card p {
-    font-size: 16px;
-}
-
-.goals-list {
-    padding-left: 22px;
-    font-size: 18px;
-    line-height: 1.9;
-}
-.check-list {
-    list-style: none;
-    padding-left: 0;
-    font-size: 18px;
-    line-height: 1.9;
-}
-
-.check-list li::before {
-    content: "✔";
-    margin-right: 10px;
-    color: #333;
-    font-weight: bold;
-}
-
-.diagram-placeholder {
-    width: 100%;
-    min-height: 320px;
-    background: white;
-    border: 1px dashed #bbb;
-    border-radius: 8px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: #777;
-    margin: 25px 0;
-    font-size: 18px;
+/* Dropdown */ 
+ 
+.dropdown, 
+.dropdown-sub { 
+    position: relative; 
+} 
+ 
+.dropdown-menu, 
+.submenu { 
+    display: none; 
+    position: absolute; 
+ 
+    background: #dddddd97; 
+    list-style: none; 
+ 
+    padding: 10px 0; 
+    min-width: 260px; 
+ 
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.10); 
+    border-radius: 4px; 
+ 
+    z-index: 1000; 
+} 
+ 
+.dropdown-menu { 
+    top: 100%; 
+    left: 0; 
+} 
+ 
+.submenu { 
+    top: 100%; 
+    left: 0; 
+} 
+ 
+.dropdown:hover > .dropdown-menu { 
+    display: block; 
+} 
+ 
+.dropdown-sub:hover > .submenu { 
+    display: block; 
+} 
+ 
+.dropdown-menu li, 
+.submenu li { 
+    margin: 0; 
+} 
+ 
+.dropdown-menu a, 
+.submenu a { 
+    display: block; 
+    padding: 11px 18px; 
+ 
+    font-size: 15px; 
+    font-weight: 500; 
+    color: #505050; 
+    white-space: nowrap; 
+} 
+ 
+.dropdown-menu a:hover, 
+.submenu a:hover { 
+    background: #eceeef; 
+    color: #34464C; 
+} 
+/* For all pages */
+.phase-page { 
+    max-width: 1100px; 
+    margin: 60px auto; 
+    padding: 0 40px; 
+} 
+ 
+.phase-page h1 { 
+    font-size: 36px; 
+    margin-bottom: 40px; 
+} 
+ 
+.phase-section { 
+    padding: 35px 0; 
+    border-bottom: 1px solid #bcbcbc; 
+} 
+ 
+.phase-section h2 { 
+    font-size: 26px; 
+    margin-bottom: 18px; 
+} 
+ 
+.phase-section p { 
+    font-size: 18px; 
+    line-height: 1.7; 
+    max-width: 850px; 
+} 
+ 
+.cards-container { 
+    display: grid; 
+    grid-template-columns: repeat(3, 1fr); 
+    gap: 24px; 
+    margin-top: 25px; 
+} 
+ 
+.info-card { 
+    background: #fffff7ff; 
+    padding: 25px; 
+    border-radius: 8px; 
+    box-shadow: 0 8px 20px rgba(0,0,0,0.06); 
+} 
+ 
+.info-card h3 { 
+    font-size: 20px; 
+    margin-bottom: 12px; 
+} 
+ 
+.info-card p { 
+    font-size: 16px; 
+} 
+ 
+.goals-list { 
+    padding-left: 22px; 
+    font-size: 18px; 
+    line-height: 1.9; 
+} 
+.check-list { 
+    list-style: none; 
+    padding-left: 0; 
+    font-size: 18px; 
+    line-height: 1.9; 
+} 
+ 
+.check-list li::before { 
+    content: "✔"; 
+    margin-right: 10px; 
+    color: #333; 
+    font-weight: bold; 
+} 
+ 
+.diagram-placeholder { 
+    width: 100%; 
+    min-height: 320px; 
+    background: white; 
+    border: 1px dashed #bbb; 
+    border-radius: 8px; 
+    display: flex; 
+    align-items: center; 
+    justify-content: center; 
+    color: #777; 
+    margin: 25px 0; 
+    font-size: 18px; 
 }
 /* Code Implementation */
 
@@ -241,7 +242,53 @@ color: #2B2B2B;
 .phase-section h2 + p {
     margin-bottom: 10px;
 }
-.test-table {
+/* Testing and QA */
+
+.testing-page .page-intro {
+    font-size: 18px;
+    line-height: 1.7;
+    max-width: 850px;
+    margin-bottom: 25px;
+    color: #444;
+}
+
+/* QA Process */
+
+.testing-page .process-timeline {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 22px;
+    margin-top: 25px;
+}
+
+.testing-page .process-step {
+    background: #fffff7ff;
+    padding: 22px;
+    border-radius: 8px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.06);
+}
+
+.testing-page .process-step span {
+    display: inline-block;
+    font-size: 14px;
+    font-weight: 700;
+    margin-bottom: 12px;
+    color: #34464C;
+}
+
+.testing-page .process-step h3 {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.testing-page .process-step p {
+    font-size: 15px;
+    line-height: 1.6;
+}
+
+/* Test Table */
+
+.testing-page .test-table {
     width: 100%;
     border-collapse: collapse;
     margin-top: 25px;
@@ -249,21 +296,142 @@ color: #2B2B2B;
     box-shadow: 0 8px 20px rgba(0,0,0,0.06);
 }
 
-.test-table th,
-.test-table td {
+.testing-page .test-table th,
+.testing-page .test-table td {
     border: 1px solid #d1d1d1;
-    padding: 14px;
+    padding: 13px;
     text-align: left;
-    font-size: 15px;
+    font-size: 14px;
+    vertical-align: top;
 }
 
-.test-table th {
+.testing-page .test-table th {
     background: #E8ECEE;
     font-weight: 700;
 }
 
-.test-table tr:nth-child(even) {
-    background: #F7F7F7;
+/* Status */
+
+.testing-page .status {
+    display: inline-block;
+    padding: 5px 12px;
+    border-radius: 20px;
+    font-size: 13px;
+    font-weight: bold;
+}
+
+.testing-page .passed{
+    background: #e8f4ea;
+    color: #427e44;
+}
+.testing-page .closed {
+    background: #f3fac8;
+    color: #bdcb03;
+}
+
+.testing-page .fixed {
+    background: #fff1d6;
+    color: #8a5a00;
+}
+
+/* Bug Reports */
+
+.testing-page .bug-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+    margin-top: 25px;
+}
+
+.testing-page .bug-card {
+    background: #fffff7ff;
+    padding: 25px;
+    border-radius: 8px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.06);
+}
+
+.testing-page .bug-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 15px;
+    margin-bottom: 15px;
+}
+
+.testing-page .bug-card h3 {
+    font-size: 19px;
+    margin-bottom: 8px;
+}
+
+.testing-page .bug-card p,
+.testing-page .bug-card li {
+    font-size: 15px;
+    line-height: 1.7;
+    margin-bottom: 7px;
+}
+
+.testing-page .bug-card ul {
+    padding-left: 20px;
+    margin-bottom: 10px;
+}
+
+/* Summary */
+
+.testing-page .summary-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 18px;
+    margin-top: 25px;
+}
+
+.testing-page .summary-box {
+    background: #fffff7ff;
+    padding: 24px;
+    border-radius: 8px;
+    text-align: center;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.06);
+}
+
+.testing-page .summary-box h3 {
+    font-size: 28px;
+    margin-bottom: 8px;
+}
+
+.testing-page .summary-box p {
+    font-size: 15px;
+    margin: 0;
+}
+
+/* Mobile */
+
+@media (max-width: 900px) {
+    .testing-page .process-timeline,
+    .testing-page .bug-grid,
+    .testing-page .summary-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .testing-page .test-table {
+        display: block;
+        overflow-x: auto;
+    }
+}
+
+
+/* Mobile */
+
+@media (max-width: 900px) {
+
+    .testing-page .process-timeline,
+    .testing-page .bug-grid,
+    .testing-page .summary-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .testing-page .test-table {
+        display: block;
+        overflow-x: auto;
+    }
 }
 
 

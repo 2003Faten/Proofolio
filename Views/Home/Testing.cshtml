@@ -1,26 +1,80 @@
-<section class="phase-page">
+<section class="phase-page testing-page">
 
-    <h1>Testing & QA</h1>
+    <h1>Software Testing & QA Case Study</h1>
+
+    <p class="page-intro">
+        This section presents how I tested my portfolio website using a structured QA approach,
+        including test planning, test execution, defect reporting, fixing, retesting, and regression testing.
+    </p>
 
     <section class="phase-section">
-        <h2>Testing Strategy</h2>
+        <h2>Testing Scope</h2>
 
         <div class="cards-container">
             <div class="info-card">
-                <h3>Static Testing</h3>
+                <h3>Testing Scope</h3>
                 <p>
-                    Static testing was applied by reviewing the code structure,
-                    file naming, MVC organization, and alignment between pages
-                    and requirements.
+                    Navigation links, project dropdown, MVC routing, page loading,
+                    UI consistency, image display, and responsive layout behavior.
                 </p>
             </div>
 
             <div class="info-card">
-                <h3>Dynamic Testing</h3>
+                <h3>Testing Approach</h3>
                 <p>
-                    Dynamic testing was performed by running the website locally
-                    and testing navigation, pages, dropdown menus, and user interactions.
+                    Manual testing, black-box testing, functional testing, UI testing,
+                    usability testing, retesting, and regression testing after fixes.
                 </p>
+            </div>
+
+            <div class="info-card">
+                <h3>Testing Environment</h3>
+                <p>
+                    Portfolio Website, ASP.NET MVC, Chrome browser, desktop screen,
+                    Visual Studio Code, Git, GitHub, and Render deployment.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <section class="phase-section">
+        <h2>Project Lifecycle Before Testing</h2>
+
+        <div class="process-timeline">
+            <div class="process-step">
+                <span>01</span>
+                <h3>Planning</h3>
+                <p>Defined the project idea, objectives, scope, and selected the development approach.</p>
+            </div>
+
+            <div class="process-step">
+                <span>02</span>
+                <h3>Requirements Gathering</h3>
+                <p>Collected and documented the functional and non-functional requirements.</p>
+            </div>
+
+            <div class="process-step">
+                <span>03</span>
+                <h3>System Analysis</h3>
+                <p>Analyzed the system structure and created diagrams to understand system behavior.</p>
+            </div>
+
+            <div class="process-step">
+                <span>04</span>
+                <h3>UI/UX Design</h3>
+                <p>Designed wireframes and user interfaces based on the requirements.</p>
+            </div>
+
+            <div class="process-step">
+                <span>05</span>
+                <h3>Development</h3>
+                <p>Implemented the website using ASP.NET MVC architecture.</p>
+            </div>
+
+            <div class="process-step">
+                <span>06</span>
+                <h3>Testing & QA</h3>
+                <p>Verified the final product through test cases, defect reporting, retesting, and regression testing.</p>
             </div>
         </div>
     </section>
@@ -46,27 +100,33 @@
 
             <div class="info-card">
                 <h3>UI Testing</h3>
-                <p>Checked visual consistency, layout behavior, and interface element visibility.</p>
+                <p>Checked visual consistency, layout behavior, spacing, and interface element visibility.</p>
             </div>
 
             <div class="info-card">
                 <h3>Usability Testing</h3>
-                <p>Evaluated how easily users can navigate through projects and SDLC phases.</p>
+                <p>Evaluated how easily users can navigate through the portfolio sections and project phases.</p>
+            </div>
+
+            <div class="info-card">
+                <h3>Regression Testing</h3>
+                <p>Retested fixed defects to confirm that the website still works correctly after changes.</p>
             </div>
         </div>
     </section>
 
     <section class="phase-section">
-        <h2>Test Cases</h2>
+        <h2>Test Case Sheet</h2>
 
         <table class="test-table">
             <thead>
                 <tr>
                     <th>ID</th>
-                    <th>Scenario</th>
+                    <th>Test Scenario</th>
+                    <th>Priority</th>
                     <th>Expected Result</th>
-                    <th>Actual Result</th>
-                    <th>Status</th>
+                    <th>Actual Result After Retesting</th>
+                    <th>Final Status</th>
                 </tr>
             </thead>
 
@@ -74,74 +134,131 @@
                 <tr>
                     <td>TC01</td>
                     <td>Open Home Page</td>
-                    <td>Home page should open successfully</td>
-                    <td>Home page opened successfully</td>
-                    <td>Passed ✔</td>
+                    <td>High</td>
+                    <td>Home page should load successfully</td>
+                    <td>Home page loaded correctly</td>
+                    <td><span class="status passed">Passed</span></td>
                 </tr>
 
                 <tr>
                     <td>TC02</td>
                     <td>Open CV Page</td>
+                    <td>Medium</td>
                     <td>CV page should open successfully</td>
-                    <td>CV page opened successfully</td>
-                    <td>Passed ✔</td>
+                    <td>CV page opened correctly</td>
+                    <td><span class="status passed">Passed</span></td>
                 </tr>
 
                 <tr>
                     <td>TC03</td>
                     <td>Open Contact Page</td>
+                    <td>Medium</td>
                     <td>Contact page should open successfully</td>
-                    <td>Contact page opened successfully</td>
-                    <td>Passed ✔</td>
+                    <td>Contact page opened correctly</td>
+                    <td><span class="status passed">Passed</span></td>
                 </tr>
 
+               <tr>
+    <td>TC04</td>
+    <td>Use Projects Dropdown</td>
+    <td>High</td>
+    <td>User should access project phases from the dropdown menu</td>
+    <td>Dropdown works correctly after fixing hover behavior</td>
+    <td><span class="status passed">Passed</span></td>
+</tr>
                 <tr>
-                    <td>TC04</td>
-                    <td>Navigate to Planning Phase</td>
-                    <td>Planning phase page should open correctly</td>
-                    <td>Planning phase page opened correctly</td>
-                    <td>Passed ✔</td>
-                </tr>
-
-                <tr>
-                    <td>TC05</td>
-                    <td>Navigate to UI/UX Design Phase</td>
-                    <td>UI/UX phase page should open correctly</td>
-                    <td>UI/UX phase page opened correctly after fixing the view name</td>
-                    <td>Passed ✔</td>
-                </tr>
+    <td>TC05</td>
+    <td>Open UI/UX Phase</td>
+    <td>High</td>
+    <td>UI/UX phase page should open correctly</td>
+    <td>UI/UX page opened successfully after fixing routing issue</td>
+    <td><span class="status passed">Passed</span></td>
+</tr>
 
                 <tr>
                     <td>TC06</td>
-                    <td>Use Projects Dropdown</td>
-                    <td>User should access project phases from the dropdown menu</td>
-<td>Dropdown worked correctly after adjusting submenu behavior</td>
-                    <td>Passed ✔</td>
+                    <td>Verify Project Images</td>
+                    <td>Medium</td>
+                    <td>Project images should display clearly</td>
+                    <td>Images displayed correctly after layout adjustment</td>
+                    <td><span class="status passed">Passed</span></td>
+                </tr>
+
+                <tr>
+                    <td>TC07</td>
+                    <td>Check Responsive Layout</td>
+                    <td>Medium</td>
+                    <td>Website layout should remain usable on different screen sizes</td>
+                    <td>Layout adjusted correctly</td>
+                    <td><span class="status passed">Passed</span></td>
+                </tr>
+
+                <tr>
+                    <td>TC08</td>
+                    <td>Regression Testing</td>
+                    <td>High</td>
+                    <td>Fixed issues should not affect existing pages</td>
+                    <td>No new issues found after retesting</td>
+                    <td><span class="status passed">Passed</span></td>
                 </tr>
             </tbody>
         </table>
     </section>
 
     <section class="phase-section">
-        <h2>Defects Found & Fixes</h2>
+        <h2>Defect Reports</h2>
 
-        <div class="cards-container">
-            <div class="info-card">
-                <h3>Dropdown Menu Issue</h3>
-                <p>
-                    The project phases menu disappeared before the user could select
-                    a phase. The issue was fixed by adjusting the submenu position
-                    and improving the hover behavior in CSS.
-                </p>
+        <div class="bug-grid">
+            <div class="bug-card">
+                <div class="bug-header">
+                    <h3>BUG-001: Dropdown Menu Issue</h3>
+                    <span class="status closed">Closed</span>
+                </div>
+
+                <p><strong>Type:</strong> UI / Usability Bug</p>
+                <p><strong>Severity:</strong> Medium</p>
+                <p><strong>Priority:</strong> High</p>
+                <p><strong>Status:</strong> Fixed and Closed</p>
+                <p><strong>Retest Result:</strong> Passed</p>
+                <p><strong>Description:</strong> The project phases dropdown disappeared before the user could select a phase.</p>
+
+                <p><strong>Steps to Reproduce:</strong></p>
+                <ul>
+                    <li>Hover over the Projects menu</li>
+                    <li>Move the cursor to select a phase</li>
+                    <li>The submenu disappears</li>
+                </ul>
+
+                <p><strong>Expected Result:</strong> Dropdown remains visible until the user selects a phase.</p>
+                <p><strong>Actual Result:</strong> Dropdown closed before selection.</p>
+                <p><strong>Root Cause:</strong> CSS hover behavior and submenu positioning issue.</p>
+                <p><strong>Fix:</strong> Adjusted submenu position and improved hover behavior in CSS.</p>
             </div>
 
-            <div class="info-card">
-                <h3>UI/UX Page Not Found</h3>
-                <p>
-                    The UI/UX page did not open because the View name did not match
-                    the Controller action. The issue was fixed by renaming the View
-                    to UIUX.cshtml to match the MVC routing structure.
-                </p>
+            <div class="bug-card">
+                <div class="bug-header">
+                    <h3>BUG-002: UI/UX Page Not Found</h3>
+                    <span class="status closed">Closed</span>
+                </div>
+
+                <p><strong>Type:</strong> Functional / Routing Bug</p>
+                <p><strong>Severity:</strong> High</p>
+                <p><strong>Priority:</strong> High</p>
+                <p><strong>Status:</strong> Fixed and Closed</p>
+                <p><strong>Retest Result:</strong> Passed</p>
+                <p><strong>Description:</strong> The UI/UX phase page did not open correctly.</p>
+
+                <p><strong>Steps to Reproduce:</strong></p>
+                <ul>
+                    <li>Open the Projects dropdown</li>
+                    <li>Select UI/UX Design phase</li>
+                    <li>The page fails to open</li>
+                </ul>
+
+                <p><strong>Expected Result:</strong> UI/UX phase page opens successfully.</p>
+                <p><strong>Actual Result:</strong> Page not found error appeared.</p>
+                <p><strong>Root Cause:</strong> MVC View name did not match the Controller action.</p>
+                <p><strong>Fix:</strong> Renamed the View to match the MVC routing structure.</p>
             </div>
         </div>
     </section>
@@ -149,19 +266,26 @@
     <section class="phase-section">
         <h2>Test Summary</h2>
 
-        <ul class="goals-list">
-            <li>Total Test Cases: 6</li>
-            <li>Passed: 6</li>
-            <li>Failed after fixes: 0</li>
-            <li>Final Status: Passed</li>
-        </ul>
-    </section>
+        <div class="summary-grid">
+            <div class="summary-box">
+                <h3>8</h3>
+                <p>Total Test Cases</p>
+            </div>
 
-    <section class="phase-section">
-        <h2>Testing Evidence</h2>
+            <div class="summary-box">
+                <h3>8</h3>
+                <p>Passed Test Cases</p>
+            </div>
 
-        <div class="diagram-placeholder">
-            Testing Evidence Screenshots
+            <div class="summary-box">
+                <h3>2</h3>
+                <p>Defects Fixed</p>
+            </div>
+
+            <div class="summary-box">
+                <h3>Passed</h3>
+                <p>Final Status</p>
+            </div>
         </div>
     </section>
 
