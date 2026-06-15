@@ -17,7 +17,7 @@ color: #2B2B2B;
     justify-content: space-between;
     align-items: center;
 
-    padding: 24px 70px;
+    padding: 18px 70px;
     background-color: #799eb09f;
     box-shadow: 0 4px 18px rgba(0, 0, 0, 0.04);
 }
@@ -482,21 +482,7 @@ height: 550px;
 .layout-code-image img {
     height: 330px;
 }
-
 /* Responsive Fixes */
-
-/* Laptop small adjustment */
-@media (min-width: 901px) {
-    .main-header {
-        padding: 18px 70px;
-    }
-
-    .hero-text {
-        background: rgba(242, 242, 242, 0.72);
-        border-radius: 10px;
-    }
-}
-
 /* iPad / Tablet */
 @media (max-width: 1024px) {
     .main-header {
@@ -516,31 +502,27 @@ height: 550px;
         background-position: center;
     }
 
-    .hero-text {
-        left: 6%;
-        bottom: 12%;
-        max-width: 520px;
-        background: rgba(242, 242, 242, 0.78);
-        border-radius: 10px;
-    }
+.hero-text {
+    left: 5%;
+    bottom: 18%;
+    max-width: 420px;
+    padding: 0;
+    background: transparent;
+    border-radius: 0;
+}
 
-    .hero-text h1 {
-        font-size: 46px;
-    }
+.hero-text h1 {
+    font-size: 42px;}
 
-    .hero-text p {
-        font-size: 20px;
-    }
+.hero-text p {
+    font-size: 18px;
+    line-height: 1.4;}
 
     .cards-container,
     .image-grid {
         grid-template-columns: repeat(2, 1fr);
     }
 
-    .wireframe-grid .image-card img {
-        height: 230px;
-        object-fit: contain;
-    }
 
     .code-image img {
         height: auto;
@@ -585,24 +567,23 @@ height: 550px;
         background-position: center;
     }
 
-    .hero-text {
-        left: 20px;
-        right: 20px;
-        bottom: 24px;
-        max-width: none;
-        padding: 16px;
-        background: rgba(242, 242, 242, 0.82);
-        border-radius: 10px;
-    }
+.hero-text {
+    left: 24px;
+    right: 140px;
+    bottom: 25%;
+    max-width: 260px;
+    padding: 0;
+    background: transparent;
+    border-radius: 0;}
 
-    .hero-text h1 {
-        font-size: 38px;
-    }
+.hero-text h1 {
+    font-size: 36px;
+}
 
-    .hero-text p {
-        font-size: 17px;
-        line-height: 1.45;
-    }
+.hero-text p {
+    font-size: 16px;
+    line-height: 1.35;
+}
 
     .phase-page {
         margin: 35px auto;
@@ -625,13 +606,15 @@ height: 550px;
     .image-grid {
         grid-template-columns: 1fr;
     }
+.wireframe-grid .image-card img {
+    height: auto;
+    object-fit: contain;
+}
 
-    .wireframe-grid .image-card img,
-    .final-ui-grid .image-card img {
-        height: auto;
-        max-height: none;
-        object-fit: contain;
-    }
+.final-ui-grid .image-card img {
+    height: auto;
+    object-fit: contain;
+}
 
     .diagram-card img,
     .mvc-architecture-image img,
