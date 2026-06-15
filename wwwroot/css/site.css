@@ -332,93 +332,93 @@ color: #2B2B2B;
 }
 
 
-/* UI/UX Image Gallery */
-
-.image-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 22px;
-    margin-top: 30px;
-    margin-bottom: 35px;
-}
-
-.image-card {
-    background: #fffff7ff;
-    border-radius: 8px;
-    padding: 14px;
-    box-shadow: 0 8px 20px rgba(0,0,0,0.06);
-    text-align: center;
-}
-
-.image-card p {
-    margin-top: 18px;
-    margin-bottom: 4px;
-    font-size: 14px;
-    font-weight: 600;
-}
-
-/* Wireframes */
-.wireframe-grid .image-card img {
-    width: 100%;
-    height: 190px;
-   object-fit: cover;
-    border: 1px solid #D6D6D6;
-    border-radius: 6px;
-    background: #fffff7ff;
-}
-
-/* Final UI Screenshots */
-.final-ui-grid .image-card img {
-    width: 100%;
-    height: 137px;
-    object-fit: contain;
-    border: 1px solid #D6D6D6;
-    border-radius: 6px;
-    background: #fffff7ff;
-}
-/* Diagrams General */
-.diagram-card {
-    margin-top: 25px;
-    margin-bottom: 30px;
-    background: #fffff7ff;
-    padding: 16px;
-    border-radius: 8px;
-    box-shadow: 0 8px 20px rgba(0,0,0,0.06);
-    text-align: center;
-
-    width: fit-content;
-    max-width: 100%;
-    margin-left: auto;
-    margin-right: auto;
-}
-.diagram-card img {
-    height: 555px;
-    max-width: 100%;
-    object-fit: contain;
-    border: 1px solid #D6D6D6;
-    border-radius: 6px;
-}
-
-
-/* Use Case Diagram */
-
-.usecase-image img {
-    height: 550px;
-}
-
-
-/* Site Map */
-
-.sitemap-image img {
-  
-height: 550px;
-}
-
-
-/* User Flow */
-
-.userflow-image img {
-    height: 550px;
+/* UI/UX Image Gallery */ 
+ 
+.image-grid { 
+    display: grid; 
+    grid-template-columns: repeat(3, 1fr); 
+    gap: 22px; 
+    margin-top: 30px; 
+    margin-bottom: 35px; 
+} 
+ 
+.image-card { 
+    background: #fffff7ff; 
+    border-radius: 8px; 
+    padding: 14px; 
+    box-shadow: 0 8px 20px rgba(0,0,0,0.06); 
+    text-align: center; 
+} 
+ 
+.image-card p { 
+    margin-top: 18px; 
+    margin-bottom: 4px; 
+    font-size: 14px; 
+    font-weight: 600; 
+} 
+ 
+/* Wireframes */ 
+.wireframe-grid .image-card img { 
+    width: 100%; 
+    height: 190px; 
+   object-fit: cover; 
+    border: 1px solid #D6D6D6; 
+    border-radius: 6px; 
+    background: #fffff7ff; 
+} 
+ 
+/* Final UI Screenshots */ 
+.final-ui-grid .image-card img { 
+    width: 100%; 
+    height: 137px; 
+    object-fit: contain; 
+    border: 1px solid #D6D6D6; 
+    border-radius: 6px; 
+    background: #fffff7ff; 
+} 
+/* Diagrams General */ 
+.diagram-card { 
+    margin-top: 25px; 
+    margin-bottom: 30px; 
+    background: #fffff7ff; 
+    padding: 16px; 
+    border-radius: 8px; 
+    box-shadow: 0 8px 20px rgba(0,0,0,0.06); 
+    text-align: center; 
+ 
+    width: fit-content; 
+    max-width: 100%; 
+    margin-left: auto; 
+    margin-right: auto; 
+} 
+.diagram-card img { 
+    height: 555px; 
+    max-width: 100%; 
+    object-fit: contain; 
+    border: 1px solid #D6D6D6; 
+    border-radius: 6px; 
+} 
+ 
+ 
+/* Use Case Diagram */ 
+ 
+.usecase-image img { 
+    height: 550px; 
+} 
+ 
+ 
+/* Site Map */ 
+ 
+.sitemap-image img { 
+   
+height: 550px; 
+} 
+ 
+ 
+/* User Flow */ 
+ 
+.userflow-image img { 
+    height: 550px; 
 }
 /* Development Images */
 
@@ -482,42 +482,14 @@ height: 550px;
 .layout-code-image img {
     height: 330px;
 }
-/* Responsive Fixes */
-
-/* iPad / Tablet */
-@media (max-width: 1024px) {
-    .main-header {
-        padding: 14px 32px;
-    }
-
-    .nav-links {
-        gap: 22px;
-    }
-
-    .nav-links a {
-        font-size: 15px;
-    }
-
-    .cards-container {
-        grid-template-columns: repeat(2, 1fr);
-    }
-
-    .cv-preview {
-        height: 600px;
-    }
-}
-
-/* Mobile */
+/* Mobile Header Fix */
 @media (max-width: 768px) {
+
     .main-header {
         padding: 14px 18px;
         flex-direction: column;
         align-items: flex-start;
         gap: 12px;
-    }
-
-    .logo {
-        font-size: 25px;
     }
 
     .nav-links {
@@ -528,35 +500,5 @@ height: 550px;
 
     .nav-links a {
         font-size: 14px;
-    }
-
-    .dropdown-menu,
-    .submenu {
-        min-width: 220px;
-    }
-
-    .phase-page {
-        margin: 35px auto;
-        padding: 0 22px;
-    }
-
-    .phase-page h1 {
-        font-size: 30px;
-    }
-
-    .phase-section h2 {
-        font-size: 23px;
-    }
-
-    .phase-section p {
-        font-size: 16px;
-    }
-
-    .cards-container {
-        grid-template-columns: 1fr;
-    }
-
-    .cv-preview {
-        height: 500px;
     }
 }
