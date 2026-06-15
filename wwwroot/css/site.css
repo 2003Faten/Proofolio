@@ -200,10 +200,7 @@ color: #2B2B2B;
 }
 /* Code Implementation */
 
-.phase-section {
-    max-width: 900px;
-    margin: 0 auto;
-}
+
 
 .code-samples {
     display: flex;
@@ -486,17 +483,177 @@ height: 550px;
     height: 330px;
 }
 
-/* Responsive Design */
-@media (max-width: 900px) {
-    .hero-text {
-        left: 7%;
-        bottom: 34%;
-        max-width: 360px;
+/* Responsive Fixes */
+
+/* Laptop small adjustment */
+@media (min-width: 901px) {
+    .main-header {
+        padding: 18px 70px;
     }
 
-    .hero-text p {
-        font-size: 18px;
+    .hero-text {
+        background: rgba(242, 242, 242, 0.72);
+        border-radius: 10px;
     }
 }
 
+/* iPad / Tablet */
+@media (max-width: 1024px) {
+    .main-header {
+        padding: 18px 32px;
+    }
+
+    .nav-links {
+        gap: 22px;
+    }
+
+    .nav-links a {
+        font-size: 15px;
+    }
+
+    .home-hero {
+        height: 70vh;
+        background-position: center;
+    }
+
+    .hero-text {
+        left: 6%;
+        bottom: 12%;
+        max-width: 520px;
+        background: rgba(242, 242, 242, 0.78);
+        border-radius: 10px;
+    }
+
+    .hero-text h1 {
+        font-size: 46px;
+    }
+
+    .hero-text p {
+        font-size: 20px;
+    }
+
+    .cards-container,
+    .image-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .wireframe-grid .image-card img {
+        height: 230px;
+        object-fit: contain;
+    }
+
+    .code-image img {
+        height: auto;
+        object-fit: contain;
+    }
+
+    .cv-preview {
+        height: 600px;
+    }
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+    .main-header {
+        padding: 14px 18px;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 12px;
+    }
+
+    .logo {
+        font-size: 25px;
+    }
+
+    .nav-links {
+        width: 100%;
+        gap: 14px;
+        flex-wrap: wrap;
+    }
+
+    .nav-links a {
+        font-size: 14px;
+    }
+
+    .dropdown-menu,
+    .submenu {
+        min-width: 220px;
+    }
+
+    .home-hero {
+        height: 78vh;
+        background-position: center;
+    }
+
+    .hero-text {
+        left: 20px;
+        right: 20px;
+        bottom: 24px;
+        max-width: none;
+        padding: 16px;
+        background: rgba(242, 242, 242, 0.82);
+        border-radius: 10px;
+    }
+
+    .hero-text h1 {
+        font-size: 38px;
+    }
+
+    .hero-text p {
+        font-size: 17px;
+        line-height: 1.45;
+    }
+
+    .phase-page {
+        margin: 35px auto;
+        padding: 0 22px;
+    }
+
+    .phase-page h1 {
+        font-size: 30px;
+    }
+
+    .phase-section h2 {
+        font-size: 23px;
+    }
+
+    .phase-section p {
+        font-size: 16px;
+    }
+
+    .cards-container,
+    .image-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .wireframe-grid .image-card img,
+    .final-ui-grid .image-card img {
+        height: auto;
+        max-height: none;
+        object-fit: contain;
+    }
+
+    .diagram-card img,
+    .mvc-architecture-image img,
+    .usecase-image img,
+    .sitemap-image img,
+    .userflow-image img {
+        height: auto;
+        width: 100%;
+    }
+
+    .code-card {
+        max-width: 100%;
+        padding: 18px;
+    }
+
+    .code-image img {
+        height: auto;
+        object-fit: contain;
+    }
+
+    .cv-preview {
+        height: 500px;
+    }
+}
 
