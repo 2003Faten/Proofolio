@@ -1,0 +1,234 @@
+
+<section class="phase-page testing-page">
+
+    <h1>Test Design</h1>
+
+    <p class="page-intro">
+        In this phase, I designed manual test cases for selected
+        functionalities of the Automation Exercise website.
+        The identified test conditions were converted into
+        structured test cases with test data, steps, and
+        expected results.
+    </p>
+
+    <section class="phase-section">
+        <h2>Test Design Approach</h2>
+
+        <div class="cards-container">
+
+            <div class="info-card">
+                <h3>Positive Testing</h3>
+                <p>
+                    Designed scenarios using valid inputs
+                    to verify expected system behavior,
+                    such as successful login and product search.
+                </p>
+            </div>
+
+            <div class="info-card">
+                <h3>Negative Testing</h3>
+                <p>
+                    Designed scenarios using invalid or
+                    unexpected inputs, such as duplicate
+                    emails and invalid email formats.
+                </p>
+            </div>
+
+            <div class="info-card">
+                <h3>Scenario-Based Testing</h3>
+                <p>
+                    Designed test cases around user actions,
+                    including product selection, cart quantity,
+                    logout, and product removal.
+                </p>
+            </div>
+
+        </div>
+    </section>
+
+    <section class="phase-section">
+        <h2>Test Case Structure</h2>
+
+        <p>
+            Each test case was documented using a consistent
+            structure to make execution and reporting easier.
+        </p>
+
+        <ul class="goals-list">
+            <li>Test Case ID and Title</li>
+            <li>Feature</li>
+            <li>Preconditions</li>
+            <li>Test Data</li>
+            <li>Test Steps</li>
+            <li>Expected Result</li>
+            <li>Actual Result</li>
+            <li>Execution Status</li>
+            <li>Notes and Evidence</li>
+        </ul>
+    </section>
+
+    <section class="phase-section">
+        <h2>Test Case Coverage</h2>
+
+        <div class="cards-container">
+
+            <div class="info-card">
+                <h3>4 Test Cases</h3>
+                <p>User Registration</p>
+            </div>
+
+            <div class="info-card">
+                <h3>2 Test Cases</h3>
+                <p>User Authentication</p>
+            </div>
+
+            <div class="info-card">
+                <h3>3 Test Cases</h3>
+                <p>Product Search</p>
+            </div>
+
+            <div class="info-card">
+                <h3>4 Test Cases</h3>
+                <p>Shopping Cart</p>
+            </div>
+
+        </div>
+    </section>
+
+    <section class="phase-section">
+        <h2>Designed Test Cases</h2>
+
+        <p>
+            The following table summarizes the 13 documented
+            manual test cases and their expected behavior.
+            Execution results are presented separately
+            in the Test Execution phase.
+        </p>
+
+        <div style="overflow-x:auto;">
+            <table class="test-table">
+                <thead>
+                    <tr>
+                        <th>Test Case ID</th>
+                        <th>Test Scenario</th>
+                        <th>Test Data / Condition</th>
+                        <th>Expected Result</th>
+                    </tr>
+                </thead>
+
+                <tbody>
+                    <tr>
+                        <td>TC-REG-001</td>
+                        <td>Required field validation</td>
+                        <td>Leave a required field empty</td>
+                        <td>Registration is blocked and the missing field is indicated.</td>
+                    </tr>
+
+                    <tr>
+                        <td>TC-REG-002</td>
+                        <td>Mobile number validation</td>
+                        <td>Letters and digits in mobile number</td>
+                        <td>Check input behavior against the confirmed phone validation requirements.</td>
+                    </tr>
+
+                    <tr>
+                        <td>TC-REG-003</td>
+                        <td>Duplicate email registration</td>
+                        <td>Previously registered email</td>
+                        <td>Registration is rejected with an appropriate message.</td>
+                    </tr>
+
+                    <tr>
+                        <td>TC-REG-004</td>
+                        <td>Invalid email format</td>
+                        <td>Email without &#64; symbol</td>
+                        <td>Invalid email format is rejected.</td>
+                    </tr>
+
+                    <tr>
+                        <td>TC-LOGIN-001</td>
+                        <td>Valid login</td>
+                        <td>Valid registered credentials</td>
+                        <td>User logs in and their username is displayed.</td>
+                    </tr>
+
+                    <tr>
+                        <td>TC-LOGOUT-001</td>
+                        <td>Logout and session check</td>
+                        <td>Logout, Back, and Refresh</td>
+                        <td>The logged-out session is not restored.</td>
+                    </tr>
+
+                    <tr>
+                        <td>TC-SEARCH-001</td>
+                        <td>Existing product search</td>
+                        <td>Blue Top</td>
+                        <td>The matching product appears in results.</td>
+                    </tr>
+
+                    <tr>
+                        <td>TC-SEARCH-002</td>
+                        <td>Non-existent product search</td>
+                        <td>zznotfound987654</td>
+                        <td>No unrelated products appear as matches.</td>
+                    </tr>
+
+                    <tr>
+                        <td>TC-SEARCH-003</td>
+                        <td>Partial product search</td>
+                        <td>Blue</td>
+                        <td>Matching partial-name products appear, if partial search is supported.</td>
+                    </tr>
+
+                    <tr>
+                        <td>TC-CART-001</td>
+                        <td>Add a single product</td>
+                        <td>Blue Top, quantity 1</td>
+                        <td>Correct product, quantity, and price appear in the cart.</td>
+                    </tr>
+
+                    <tr>
+                        <td>TC-CART-002</td>
+                        <td>Set product quantity</td>
+                        <td>Blue Top, quantity 4</td>
+                        <td>Quantity is 4 and the total equals unit price multiplied by 4.</td>
+                    </tr>
+
+                    <tr>
+                        <td>TC-CART-003</td>
+                        <td>Add the same product twice</td>
+                        <td>Blue Top added twice</td>
+                        <td>The cart represents two units with the correct total.</td>
+                    </tr>
+
+                    <tr>
+                        <td>TC-CART-004</td>
+                        <td>Remove product and refresh</td>
+                        <td>Remove Blue Top, then Refresh</td>
+                        <td>The product remains removed after refreshing.</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </section>
+
+    <section class="phase-section">
+        <h2>Test Design Deliverable</h2>
+
+        <p>
+            A Microsoft Excel test case workbook was prepared
+            to document the 13 manual test cases, including
+            preconditions, test data, execution steps,
+            expected results, actual results, status,
+            and review notes.
+        </p>
+
+        <p>
+            Some registration validation conditions require
+            additional requirement confirmation.
+            These are documented for review rather than
+            being classified as confirmed defects.
+        </p>
+    </section>
+
+</section>

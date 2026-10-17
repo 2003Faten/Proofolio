@@ -1,0 +1,152 @@
+{
+  "info": {
+    "_postman_id": "e9d107dc-c672-485d-8d63-4c60a9e5140e",
+    "name": "E-Commerce API Testing",
+    "description": "### Welcome to Postman! This is your first collection. \n\nCollections are your starting point for building and testing APIs. You can use this one to:\n\n• Group related requests\n• Test your API in real-world scenarios\n• Document and share your requests\n\nUpdate the name and overview whenever you’re ready to make it yours.\n\n[Learn more about Postman Collections.](https://learning.postman.com/docs/collections/collections-overview/)",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "59016718",
+    "_collection_link": "https://go.postman.co/collection/59016718-e9d107dc-c672-485d-8d63-4c60a9e5140e?source=collection_link"
+  },
+  "item": [
+    {
+      "name": "API-TC-001 - Get All Products",
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "type": "text/javascript",
+            "exec": [
+              "pm.test(\"Status code is 200\", function () {\npm.response.to.have.status(200);\n});\n\npm.test(\"Products list is not empty\", function () {\nconst data = pm.response.json();\npm.expect(data.products).to.be.an(\"array\").that.is.not.empty;\n});"
+            ]
+          }
+        }
+      ],
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "https://automationexercise.com/api/productsList",
+          "protocol": "https",
+          "host": [
+            "automationexercise",
+            "com"
+          ],
+          "path": [
+            "api",
+            "productsList"
+          ]
+        },
+        "description": "This is a GET request and it is used to \"get\" data from an endpoint. There is no request body for a GET request, but you can use query parameters to help specify the resource you want data on (e.g., in this request, we have `id=1`).\n\nA successful GET response will have a `200 OK` status, and should include some kind of response body - for example, HTML web content or JSON data."
+      },
+      "response": []
+    },
+    {
+      "name": "API-TC-002 - POST Products List",
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "type": "text/javascript",
+            "exec": [
+              "pm.test(\"Response code is 405\", function () {\nconst data = pm.response.json();\npm.expect(data.responseCode).to.eql(405);\n});\n\npm.test(\"Unsupported method message is correct\", function () {\nconst data = pm.response.json();\npm.expect(data.message).to.eql(\n\"This request method is not supported.\"\n);\n});"
+            ]
+          }
+        }
+      ],
+      "request": {
+        "method": "POST",
+        "header": [],
+        "url": {
+          "raw": "https://automationexercise.com/api/productsList",
+          "protocol": "https",
+          "host": [
+            "automationexercise",
+            "com"
+          ],
+          "path": [
+            "api",
+            "productsList"
+          ]
+        },
+        "description": "This is a GET request and it is used to \"get\" data from an endpoint. There is no request body for a GET request, but you can use query parameters to help specify the resource you want data on (e.g., in this request, we have `id=1`).\n\nA successful GET response will have a `200 OK` status, and should include some kind of response body - for example, HTML web content or JSON data."
+      },
+      "response": []
+    },
+    {
+      "name": "API-TC-003 - Search Product",
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "type": "text/javascript",
+            "exec": [
+              "pm.test(\"HTTP status is 200\", function () {\npm.response.to.have.status(200);\n});\n\npm.test(\"Search response is successful\", function () {\nconst data = pm.response.json();\npm.expect(data.responseCode).to.eql(200);\npm.expect(data.products).to.be.an(\"array\").that.is.not.empty;\n});\n\npm.test(\"Products match name or category\", function () { const data = pm.response.json();\n\nconst allMatch = data.products.every(product =>\n    product.name.toLowerCase().includes(\"top\") ||\n    product.category.category.toLowerCase().includes(\"top\")\n);\npm.expect(allMatch).to.be.true;\n});"
+            ]
+          }
+        }
+      ],
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "urlencoded",
+          "urlencoded": [
+            {
+              "key": "search_product",
+              "value": "top"
+            }
+          ]
+        },
+        "url": {
+          "raw": "https://automationexercise.com/api/searchProduct",
+          "protocol": "https",
+          "host": [
+            "automationexercise",
+            "com"
+          ],
+          "path": [
+            "api",
+            "searchProduct"
+          ]
+        },
+        "description": "This is a POST request, submitting data to an API via the request body. This request submits JSON data, and the data is reflected in the response.\n\nA successful POST request typically returns a `200 OK` or `201 Created` response code."
+      },
+      "response": []
+    },
+    {
+      "name": "API-TC-004 - Missing Search Parameter",
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "type": "text/javascript",
+            "exec": [
+              "pm.test(\"Response code is 400\", function () {\r\nconst data = pm.response.json();\r\npm.expect(data.responseCode).to.eql(400);\r\n});\r\n\r\npm.test(\"Missing parameter message is correct\", function () {\r\nconst data = pm.response.json();\r\npm.expect(data.message).to.eql(\r\n\"Bad request, search_product parameter is missing in POST request.\"\r\n);\r\n});"
+            ]
+          }
+        }
+      ],
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "urlencoded",
+          "urlencoded": []
+        },
+        "url": {
+          "raw": "https://automationexercise.com/api/searchProduct",
+          "protocol": "https",
+          "host": [
+            "automationexercise",
+            "com"
+          ],
+          "path": [
+            "api",
+            "searchProduct"
+          ]
+        }
+      },
+      "response": []
+    }
+  ]
+}

@@ -1,0 +1,349 @@
+
+<section class="phase-page testing-page">
+
+    <h1>API Testing</h1>
+
+    <p class="page-intro">
+        This section presents practical API testing performed
+        on the Automation Exercise e-commerce website using Postman.
+        Four API test cases were executed to validate HTTP requests,
+        response data, error handling, and expected API behavior.
+    </p>
+
+    <section class="phase-section">
+        <h2>API Testing Overview</h2>
+
+        <div class="cards-container">
+
+            <div class="info-card">
+                <h3>Application</h3>
+                <p>
+                    Automation Exercise E-Commerce Website
+                </p>
+            </div>
+
+            <div class="info-card">
+                <h3>Testing Tool</h3>
+                <p>
+                    Postman was used to send API requests,
+                    inspect responses, and run automated assertions.
+                </p>
+            </div>
+
+            <div class="info-card">
+                <h3>Testing Approach</h3>
+                <p>
+                    Functional API testing, positive testing,
+                    negative testing, and response validation.
+                </p>
+            </div>
+
+        </div>
+    </section>
+
+    <section class="phase-section">
+        <h2>API Test Objectives</h2>
+
+        <ul class="goals-list">
+            <li>Verify successful API requests and responses.</li>
+            <li>Validate returned response data.</li>
+            <li>Test supported and unsupported HTTP methods.</li>
+            <li>Verify API behavior when required parameters are missing.</li>
+            <li>Use Postman assertions to validate expected results.</li>
+        </ul>
+    </section>
+
+    <section class="phase-section">
+        <h2>Test Execution Summary</h2>
+
+        <div class="summary-grid">
+
+            <div class="summary-box">
+                <h3>4</h3>
+                <p>API Test Cases</p>
+            </div>
+
+            <div class="summary-box">
+                <h3>8</h3>
+                <p>Assertions Passed</p>
+            </div>
+
+            <div class="summary-box">
+                <h3>4</h3>
+                <p>Final Test Cases Passed</p>
+            </div>
+
+            <div class="summary-box">
+                <h3>0</h3>
+                <p>Confirmed API Defects</p>
+            </div>
+
+        </div>
+    </section>
+
+    <section class="phase-section">
+        <h2>API Test Cases</h2>
+
+        <p>
+            Four API requests were organized in a Postman
+            collection named E-Commerce API Testing.
+            Each test case included two assertions.
+        </p>
+
+        <div style="overflow-x:auto;">
+            <table class="test-table">
+                <thead>
+                    <tr>
+                        <th>Test Case ID</th>
+                        <th>Method</th>
+                        <th>Endpoint</th>
+                        <th>Test Scenario</th>
+                        <th>Final Status</th>
+                    </tr>
+                </thead>
+
+                <tbody>
+                    <tr>
+                        <td>API-TC-001</td>
+                        <td>GET</td>
+                        <td>/api/productsList</td>
+                        <td>Retrieve the products list successfully.</td>
+                        <td><span class="status passed">PASS</span></td>
+                    </tr>
+
+                    <tr>
+                        <td>API-TC-002</td>
+                        <td>POST</td>
+                        <td>/api/productsList</td>
+                        <td>Verify the response to an unsupported request method.</td>
+                        <td><span class="status passed">PASS</span></td>
+                    </tr>
+
+                    <tr>
+                        <td>API-TC-003</td>
+                        <td>POST</td>
+                        <td>/api/searchProduct</td>
+                        <td>Search for products using a valid search parameter.</td>
+                        <td><span class="status passed">PASS</span></td>
+                    </tr>
+
+                    <tr>
+                        <td>API-TC-004</td>
+                        <td>POST</td>
+                        <td>/api/searchProduct</td>
+                        <td>Verify error handling when the required search parameter is missing.</td>
+                        <td><span class="status passed">PASS</span></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </section>
+
+    <section class="phase-section">
+        <h2>Detailed Test Results</h2>
+
+        <div class="cards-container">
+
+            <div class="info-card">
+                <h3>API-TC-001</h3>
+                <p><strong>Method:</strong> GET</p>
+                <p><strong>Endpoint:</strong> /api/productsList</p>
+                <p><strong>HTTP Status:</strong> 200</p>
+                <p><strong>Response Code:</strong> 200</p>
+                <p>
+                    <strong>Result:</strong>
+                    The API returned a non-empty products list.
+                    Both assertions passed.
+                </p>
+            </div>
+
+            <div class="info-card">
+                <h3>API-TC-002</h3>
+                <p><strong>Method:</strong> POST</p>
+                <p><strong>Endpoint:</strong> /api/productsList</p>
+                <p><strong>HTTP Status:</strong> 200</p>
+                <p><strong>Response Code:</strong> 405</p>
+                <p>
+                    <strong>Result:</strong>
+                    The response indicated that the request
+                    method was not supported.
+                    Both assertions passed.
+                </p>
+            </div>
+
+            <div class="info-card">
+                <h3>API-TC-003</h3>
+                <p><strong>Method:</strong> POST</p>
+                <p><strong>Endpoint:</strong> /api/searchProduct</p>
+                <p><strong>Test Data:</strong> search_product = top</p>
+                <p><strong>Response Code:</strong> 200</p>
+                <p>
+                    <strong>Result:</strong>
+                    Products were returned, including matches
+                    in product names or categories.
+                    Both final assertions passed.
+                </p>
+            </div>
+
+            <div class="info-card">
+                <h3>API-TC-004</h3>
+                <p><strong>Method:</strong> POST</p>
+                <p><strong>Endpoint:</strong> /api/searchProduct</p>
+                <p><strong>Test Data:</strong> Missing search_product</p>
+                <p><strong>HTTP Status:</strong> 200</p>
+                <p><strong>Response Code:</strong> 400</p>
+                <p>
+                    <strong>Result:</strong>
+                    The API returned an error message identifying
+                    the missing required parameter.
+                    Both assertions passed.
+                </p>
+            </div>
+
+        </div>
+    </section>
+
+    <section class="phase-section">
+        <h2>HTTP Status vs API Response Code</h2>
+
+        <p>
+            During testing, I observed that some API responses
+            returned HTTP status 200 while the JSON response body
+            contained a different responseCode.
+        </p>
+
+        <div class="cards-container">
+
+            <div class="info-card">
+                <h3>HTTP Status Code</h3>
+                <p>
+                    Indicates the HTTP-level result
+                    of the request.
+                </p>
+            </div>
+
+            <div class="info-card">
+                <h3>API Response Code</h3>
+                <p>
+                    A value returned inside the JSON body
+                    to describe the application's result.
+                </p>
+            </div>
+
+            <div class="info-card">
+                <h3>Practical Example</h3>
+                <p>
+                    In API-TC-004, the HTTP status was 200,
+                    while the JSON responseCode was 400
+                    because a required parameter was missing.
+                </p>
+            </div>
+
+        </div>
+    </section>
+
+    <section class="phase-section">
+        <h2>Test Assertion Improvement</h2>
+
+        <p>
+            While testing product search, an initial assertion
+            checked whether every returned product name
+            contained the search keyword.
+        </p>
+
+        <p>
+            Further investigation showed that some relevant
+            products matched through their category information,
+            such as Tops &amp; Shirts, rather than their name.
+        </p>
+
+        <p>
+            I improved the assertion to consider matching
+            product names or categories.
+            The updated assertions passed.
+        </p>
+
+        <p>
+            This was treated as a test assertion improvement,
+            not a confirmed API defect.
+        </p>
+    </section>
+
+    <section class="phase-section">
+        <h2>Testing Tools &amp; Documentation</h2>
+
+        <div class="cards-container">
+
+            <div class="info-card">
+                <h3>Postman Collection</h3>
+                <p>
+                    A Postman collection containing four
+                    API requests and their automated
+                    response assertions was exported
+                    in JSON format.
+                </p>
+            </div>
+
+            <div class="info-card">
+                <h3>Jira</h3>
+                <p>
+                    API testing activities and results
+                    were documented using Jira.
+                </p>
+
+<p style="margin-top:15px;">
+    <a href="https://fatenalmrwani40.atlassian.net/browse/KAN-22"
+       target="_blank" rel="noopener noreferrer">
+        View API Test Case in Jira
+    </a>
+</p>
+
+            </div>
+
+            <div class="info-card">
+                <h3>Test Evidence</h3>
+                <p>
+                    Screenshots of selected Postman responses
+                    and assertion results were captured
+                    to support test documentation.
+                </p>
+            </div>
+
+        </div>
+
+
+<a href="/files/E-Commerce%20API%20Testing.postman_collection.json"
+   class="download-btn"
+   style="display:block; width:calc((100% - 48px) / 3); text-align:center; padding:12px 6px; font-size:12px;"
+   download>
+    Download Postman Collection (JSON)
+</a>
+
+
+    </section>
+
+    <section class="phase-section">
+        <h2>Final API Testing Conclusion</h2>
+
+        <p>
+            All four documented API test cases passed
+            their final assertions, with eight successful
+            assertions in total.
+        </p>
+
+        <p>
+            The testing covered product list retrieval,
+            unsupported HTTP method handling,
+            valid product search, and missing parameter
+            validation.
+        </p>
+
+        <p>
+            These results demonstrate practical experience
+            using Postman for API functional testing,
+            response analysis, negative testing,
+            and assertion validation.
+        </p>
+    </section>
+
+</section>

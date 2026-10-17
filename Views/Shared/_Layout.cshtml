@@ -10,6 +10,7 @@
 
 <body>
 
+
 <header class="main-header">
     <a class="logo" asp-controller="Home" asp-action="Index">Proofolio</a>
 
@@ -23,6 +24,7 @@
                 <a href="#">Projects ▾</a>
 
                 <ul class="dropdown-menu">
+
                     <li class="dropdown-sub">
                         <a href="#">Proofolio ▸</a>
 
@@ -35,6 +37,29 @@
                             <li><a asp-controller="Home" asp-action="Testing">Testing & QA</a></li>
                         </ul>
                     </li>
+
+                    <!-- New Project: E-Commerce QA Testing -->
+                    <li class="dropdown-sub">
+                        <a href="#">E-Commerce QA Testing ▸</a>
+
+                        <ul class="submenu">
+                            <li>
+                                <span style="display:block; padding:11px 18px; font-size:15px; font-weight:bold; color:#34464C;">
+                                    Manual Testing
+                                </span>
+                            </li>
+
+                            <li><a asp-controller="Home" asp-action="EcomPlanning">Test Planning</a></li>
+                            <li><a asp-controller="Home" asp-action="EcomAnalysis">Test Analysis</a></li>
+                            <li><a asp-controller="Home" asp-action="EcomDesign">Test Design</a></li>
+                            <li><a asp-controller="Home" asp-action="EcomImplementation">Test Implementation</a></li>
+                            <li><a asp-controller="Home" asp-action="EcomExecution">Test Execution</a></li>
+                            <li><a asp-controller="Home" asp-action="EcomCompletion">Test Completion &amp; Reporting</a></li>
+
+                            <li><a asp-controller="Home" asp-action="EcomApi">API Testing</a></li>
+                        </ul>
+                    </li>
+
                 </ul>
             </li>
 
@@ -48,6 +73,7 @@
         </ul>
     </nav>
 </header>
+
 
 <main>
     @RenderBody()

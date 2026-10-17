@@ -1,0 +1,275 @@
+
+<section class="phase-page testing-page">
+
+    <h1>Test Execution</h1>
+
+    <p class="page-intro">
+        During this phase, I manually executed 13 test cases
+        on the Automation Exercise e-commerce website.
+        Actual results were compared with expected results,
+        and observations were documented using Excel and Jira.
+    </p>
+
+    <section class="phase-section">
+        <h2>Execution Summary</h2>
+
+        <div class="summary-grid">
+            <div class="summary-box">
+                <h3>13</h3>
+                <p>Total Test Cases</p>
+            </div>
+
+            <div class="summary-box">
+                <h3>11</h3>
+                <p>Passed</p>
+            </div>
+
+            <div class="summary-box">
+                <h3>1</h3>
+                <p>PASS - Limited</p>
+            </div>
+
+            <div class="summary-box">
+                <h3>1</h3>
+                <p>Review Required</p>
+            </div>
+        </div>
+
+    </section>
+
+    <section class="phase-section">
+        <h2>Test Execution Process</h2>
+
+        <ul class="check-list">
+            <li>Opened the Automation Exercise website.</li>
+            <li>Followed the documented test case steps.</li>
+            <li>Entered the required test data.</li>
+            <li>Observed the actual system behavior.</li>
+            <li>Compared actual and expected results.</li>
+            <li>Recorded test statuses and observations.</li>
+            <li>Collected screenshots for available test evidence.</li>
+        </ul>
+    </section>
+
+    <section class="phase-section">
+        <h2>Manual Test Execution Results</h2>
+
+        <p>
+            The following table summarizes the actual results
+            recorded for the 13 manual test cases.
+        </p>
+
+        <div style="overflow-x:auto;">
+            <table class="test-table">
+                <thead>
+                    <tr>
+                        <th>Test Case ID</th>
+                        <th>Test Scenario</th>
+                        <th>Actual Result</th>
+                        <th>Status</th>
+                    </tr>
+                </thead>
+
+                <tbody>
+                    <tr>
+                        <td>TC-REG-001</td>
+                        <td>Required field validation</td>
+                        <td>Registration was blocked when a required field was left empty. The exact field was not recorded.</td>
+                        <td><span class="status fixed">PASS - Limited</span></td>
+                    </tr>
+
+                    <tr>
+                        <td>TC-REG-002</td>
+                        <td>Mobile number validation</td>
+                        <td>The website accepted letters and digits in the mobile number field and created the account.</td>
+                        <td><span class="status fixed">REVIEW</span></td>
+                    </tr>
+
+                    <tr>
+                        <td>TC-REG-003</td>
+                        <td>Duplicate email registration</td>
+                        <td>The website rejected the existing email address and displayed an error message.</td>
+                        <td><span class="status passed">PASS</span></td>
+                    </tr>
+
+                    <tr>
+                        <td>TC-REG-004</td>
+                        <td>Invalid email format</td>
+                        <td>The invalid email address was rejected because the required symbol was missing.</td>
+                        <td><span class="status passed">PASS</span></td>
+                    </tr>
+
+                    <tr>
+                        <td>TC-LOGIN-001</td>
+                        <td>Valid user login</td>
+                        <td>The user successfully logged in and the username appeared.</td>
+                        <td><span class="status passed">PASS</span></td>
+                    </tr>
+
+                    <tr>
+                        <td>TC-LOGOUT-001</td>
+                        <td>Logout and session verification</td>
+                        <td>Logout succeeded. Back and Refresh did not restore the authenticated session.</td>
+                        <td><span class="status passed">PASS</span></td>
+                    </tr>
+
+                    <tr>
+                        <td>TC-SEARCH-001</td>
+                        <td>Search for an existing product</td>
+                        <td>Searching for Blue Top returned the matching product.</td>
+                        <td><span class="status passed">PASS</span></td>
+                    </tr>
+
+                    <tr>
+                        <td>TC-SEARCH-002</td>
+                        <td>Search for a non-existent product</td>
+                        <td>No products were displayed in the search results.</td>
+                        <td><span class="status passed">PASS</span></td>
+                    </tr>
+
+                    <tr>
+                        <td>TC-SEARCH-003</td>
+                        <td>Partial product search</td>
+                        <td>Searching for Blue returned seven products, including Blue Top.</td>
+                        <td><span class="status passed">PASS</span></td>
+                    </tr>
+
+                    <tr>
+                        <td>TC-CART-001</td>
+                        <td>Add a single product</td>
+                        <td>Blue Top appeared in the cart with quantity 1 and the correct price.</td>
+                        <td><span class="status passed">PASS</span></td>
+                    </tr>
+
+                    <tr>
+                        <td>TC-CART-002</td>
+                        <td>Set product quantity to four</td>
+                        <td>The cart displayed quantity 4 and the calculated total was correct.</td>
+                        <td><span class="status passed">PASS</span></td>
+                    </tr>
+
+                    <tr>
+                        <td>TC-CART-003</td>
+                        <td>Add the same product twice</td>
+                        <td>The cart displayed two units of the product with the correct total.</td>
+                        <td><span class="status passed">PASS</span></td>
+                    </tr>
+
+                    <tr>
+                        <td>TC-CART-004</td>
+                        <td>Remove a product and refresh</td>
+                        <td>The product was removed and remained removed after refreshing the page.</td>
+                        <td><span class="status passed">PASS</span></td>
+                    </tr>
+
+                </tbody>
+            </table>
+        </div>
+    </section>
+
+    <section class="phase-section">
+        <h2>Observation Requiring Review</h2>
+
+        <div class="bug-grid">
+
+            <div class="bug-card">
+                <div class="bug-header">
+                    <h3>Mobile Number Validation</h3>
+                    <span class="status fixed">REVIEW</span>
+                </div>
+
+                <p><strong>Test Case:</strong> TC-REG-002</p>
+                <p><strong>Feature:</strong> User Registration</p>
+
+                <p>
+                    <strong>Observation:</strong>
+                    The mobile number field accepted
+                    alphabetic characters along with digits.
+                    Account creation was successful.
+                </p>
+
+                <p>
+                    <strong>Impact:</strong>
+                    The input may require additional
+                    validation depending on the application's
+                    business requirements.
+                </p>
+
+                <p>
+                    <strong>Conclusion:</strong>
+                    This is a potential validation issue,
+                    not a confirmed software defect,
+                    because the field requirements
+                    have not been verified.
+                </p>
+            </div>
+
+            <div class="bug-card">
+                <div class="bug-header">
+                    <h3>Limited Test Coverage</h3>
+                    <span class="status fixed">PASS - Limited</span>
+                </div>
+
+                <p><strong>Test Case:</strong> TC-REG-001</p>
+                <p><strong>Feature:</strong> User Registration</p>
+
+                <p>
+                    <strong>Observation:</strong>
+                    Required-field validation was observed
+                    for one field.
+                </p>
+
+                <p>
+                    <strong>Limitation:</strong>
+                    The exact field and validation message
+                    were not recorded.
+                </p>
+
+                <p>
+                    <strong>Conclusion:</strong>
+                    The observed behavior passed,
+                    but the test does not demonstrate
+                    complete validation coverage.
+                </p>
+            </div>
+
+        </div>
+    </section>
+
+    <section class="phase-section">
+        <h2>Test Evidence</h2>
+
+   
+<p>
+    Selected screenshots from manual test execution
+    demonstrate product search and shopping cart validation.
+</p>
+
+<div class="image-grid">
+
+    <div class="image-card">
+        <img src="/images/ecommerce-evidence/photo_1448-05-07%2000.33.22.jpeg"
+             alt="Exact product search"
+             style="width:100%; height:170px; object-fit:contain;" />
+        <p>TC-SEARCH-001 | Exact Product Search</p>
+    </div>
+
+    <div class="image-card">
+        <img src="/images/ecommerce-evidence/photo_1448-05-07%2000.33.23.jpeg"
+             alt="No matching search results"
+             style="width:100%; height:170px; object-fit:contain;" />
+        <p>TC-SEARCH-002 | No Matching Results</p>
+    </div>
+
+    <div class="image-card">
+        <img src="/images/ecommerce-evidence/photo_1448-05-07%2000.33.27.jpeg"
+             alt="Shopping cart with four products"
+             style="width:100%; height:170px; object-fit:contain;" />
+        <p>TC-CART-002 | Cart Quantity Validation</p>
+    </div>
+
+</div>
+
+    </section>
+
+</section>

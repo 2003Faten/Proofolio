@@ -52,6 +52,45 @@ public class HomeController : Controller
         return View();
     }
 
+    // E-Commerce QA - Manual Testing
+
+    public IActionResult EcomPlanning()
+    {
+        return View();
+    }
+
+    public IActionResult EcomAnalysis()
+    {
+        return View();
+    }
+
+    public IActionResult EcomDesign()
+    {
+        return View();
+    }
+
+    public IActionResult EcomImplementation()
+    {
+        return View();
+    }
+
+    public IActionResult EcomExecution()
+    {
+        return View();
+    }
+
+    public IActionResult EcomCompletion()
+    {
+        return View();
+    }
+
+    // E-Commerce QA - API Testing
+
+    public IActionResult EcomApi()
+    {
+        return View();
+    }
+
     [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
     public IActionResult Error()
     {

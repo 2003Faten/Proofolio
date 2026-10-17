@@ -670,3 +670,10 @@ height: 550px;
         font-size: 14px;
     }
 }
+
+/* Fix project submenu overlap */
+.dropdown-menu > .dropdown-sub > .submenu {
+    top: 0;
+    left: auto;
+    right: 100%;
+}
